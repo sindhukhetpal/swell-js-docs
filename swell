@@ -1,0 +1,13 @@
+import swell from 'swell-js'
+
+// Initialize the client first
+swell.init('galaxy-swell', 'pk_U1EA6yJfRZH6LlznctXGcaMgKbxkZmRe')
+
+// Now you can use any method
+const products = await swell.products.list({
+  category: 'featured-products',
+  limit: 25,
+  page: 1
+})
+
+console.log(products)
